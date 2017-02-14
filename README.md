@@ -16,12 +16,12 @@
 * System asks how much memory this process will need. 
 * Allocate this memory using "best-fit" approach.
 
-### The handling routine does:
+#### The handling routine does:
 1. Create a PCB for this process, 
 2. Generate a PID,
 3. Enqueue the PCB into the Ready Queue.
 
-### If the CPU is not occupied, 
+#### If the CPU is not occupied, 
 * The first process in the Ready Queue should be passed to the CPU. 
 
   * The process in the CPU can issue system calls. One of these is "t", which indicate that the process is terminating. 
@@ -30,32 +30,32 @@
   
 ##### These should:
 
-###### • Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
+###### * Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
 
-#### The OS should recycle the PCB (but not the PID), in other words reclaim the now unused memory.
+###### * The OS should recycle the PCB (but not the PID), in other words reclaim the now unused memory.
 
-#### ATT : Each non-CPU device has a "name" consisting of a letter and an integer. 
+##### ATT : Each non-CPU device has a "name" consisting of a letter and an integer. 
 
-### "S" on the keyboard indicates a "Snapshot" interrupt (simulating a Big Button on the Sys-op's console):
+##### "S" on the keyboard indicates a "Snapshot" interrupt (simulating a Big Button on the Sys-op's console):
 
-#### •The handling routine should wait for the next keyboard input and, 
+##### The handling routine should wait for the next keyboard input and, 
 
-### * if "r":
+##### * if "r":
  * Show the PIDs of the processes in the Ready Queue, 
-### * if "p":
+##### * if "p":
  * Show the PIDs of the processes in the printer queues.
  * Printer specific information: I/O queue, 
  * Name of the file that is currently printing
  * Its size
 
-### * if "d":
+##### * if "d":
 * Display I/O queue,
 * Name of the file that is currently printing, 
 * Size
 * Type of operation ("read" or "write")). 
 * Be sure the contents of the queues don't scroll of a 24 line. screen. 
 
-### *If "S" interrupt is followed by "m":
+##### *If "S" interrupt is followed by "m":
 * Show the current state of memory (show where each process is located in memory)
 
 
