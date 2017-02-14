@@ -7,7 +7,8 @@ This program has two stages of operation:
 *	Program asks user how much memory our system has (assume that there is only one CPU).
 ### 2/"running" section:
 *	Handle system calls issued by the process currently controlling the CPU (lower case will indicate system calls).
-*	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process. ###### These calls and interrupts will actually be indicated by keyboard input
+*	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process. 
+###### These calls and interrupts will actually be indicated by keyboard input
 
 *->An "A" entered on the keyboard indicates the arrival of a process. 
 *->System asks how much memory this process will need. 
