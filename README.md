@@ -76,14 +76,17 @@
  * Printer specific information: I/O queue, 
  * Name of the file that is currently printing
  * Its size
+
 ##### If "d":
 * Display I/O queue,
 * Name of the file that is currently printing, 
 * Size
 * Type of operation ("read" or "write")). 
 * Be sure the contents of the queues don't scroll of a 24 line. screen. 
+
 ##### If "S" on the keyboard:
 * Indicates a "Snapshot" interrupt (simulating a Big Button on the Sys-op's console):
+
 ##### If "S" interrupt followed by "m":
 * Show the current state of memory (show where each process is located in memory)
 
