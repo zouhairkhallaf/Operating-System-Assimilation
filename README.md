@@ -14,15 +14,15 @@ This program has two stages of operation:
 *->System asks how much memory this process will need. 
 *->Allocate this memory using "best-fit" approach.
 
-#### The handling routine should:
-1.	Create a PCB for this process, 
-2.	Generate a PID,
-3.	Enqueue the PCB into the Ready Queue. 
-If the CPU is not occupied, 
-->The first process in the Ready Queue should be passed to the CPU. 
-->The process in the CPU can issue system calls. 
+### The handling routine does:
+1. Create a PCB for this process, 
+2. Generate a PID,
+3. Enqueue the PCB into the Ready Queue. 
+###### If the CPU is not occupied, 
+..1. The first process in the Ready Queue should be passed to the CPU. 
+...1. ->The process in the CPU can issue system calls. 
 One of these is "t", which indicate that the process is terminating. 
--> The process currently in the CPU will request "printer 1" by issuing a "p1" on the keyboard, and Printer 1 will signal an interrupt indicating completion of the task at the head of its queue with a "P1" being entered at the keyboard. Similarly, "d3" to request disk 3 and "D3" to signal D3's completion. On such a "task completed" interrupt the PCB for that process should be moved to the back of the Ready Queue. After a system call (e.g. "p3") is made, you should prompt the process (that's me) for various parameters.
+...2. -> The process currently in the CPU will request "printer 1" by issuing a "p1" on the keyboard, and Printer 1 will signal an interrupt indicating completion of the task at the head of its queue with a "P1" being entered at the keyboard. Similarly, "d3" to request disk 3 and "D3" to signal D3's completion. On such a "task completed" interrupt the PCB for that process should be moved to the back of the Ready Queue. After a system call (e.g. "p3") is made, you should prompt the process (that's me) for various parameters.
 These should:
 •	Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it) and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
 
