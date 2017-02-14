@@ -14,7 +14,7 @@
 ##### These calls and interrupts will actually be indicated by keyboard input
 ###### *An "A" entered on the keyboard indicates the arrival of a process. 
 ###### * System asks how much memory this process will need. 
-* Allocate this memory using "best-fit" approach.
+###### * Allocate this memory using "best-fit" approach.
 
 ### The handling routine does:
 1. Create a PCB for this process, 
