@@ -43,19 +43,13 @@
   
 ##### These should:
 
-###### * Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
+###### Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
 
 ##### If "r" 
 * Read mode
 
 ##### If "w" 
 * Write mode
-
-###### * The OS should recycle the PCB (but not the PID), in other words reclaim the now unused memory.
-
-##### ATT : Each non-CPU device has a "name" consisting of a letter and an integer. 
-
-##### The handling routine should wait for the next keyboard input: 
 
 ##### If "r":
 * Show the PIDs of the processes in the Ready Queue, 
@@ -79,6 +73,4 @@
 ##### If "S" interrupt followed by "m":
 * Show the current state of memory (show where each process is located in memory)
 
-
-
-
+##### The OS should recycle the PCB (but not the PID), in other words reclaim the now unused memory. Each non-CPU device has a "name" consisting of a letter and an integer.The handling routine should wait for the next keyboard input.
