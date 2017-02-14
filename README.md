@@ -30,7 +30,7 @@
   
 ##### These should:
 
-###### • Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it) and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
+###### • Include the filename, whether the requested action is a "read" or a "write" ("r" or "w" on the keyboard; You can only write to a printer, so no need to prompt it and, if a write, what is the file size. The PCB for this process and the associated information should be enqueued to the appropriate device queue.
 
 #### The OS should recycle the PCB (but not the PID), in other words reclaim the now unused memory.
 
