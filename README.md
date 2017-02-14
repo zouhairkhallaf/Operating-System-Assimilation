@@ -2,16 +2,18 @@
 ## This program handles the basic data structures (i.e. the devices and their queues All queues are FIFO) in an operating system
 
 ### This program has two stages of operation:
+
 #### 1/"sys gen" section:
 *	The system installer (me) specifies how many devices of each type (printers and disks) are in the system
 *	Program asks user how much memory our system has (assume that there is only one CPU).
 
 #### 2/"running" section:
 *	Handle system calls issued by the process currently controlling the CPU (lower case will indicate system calls).
-*	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process. 
+*	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process.
+
 ##### These calls and interrupts will actually be indicated by keyboard input
-* An "A" entered on the keyboard indicates the arrival of a process. 
-* System asks how much memory this process will need. 
+###### *An "A" entered on the keyboard indicates the arrival of a process. 
+###### * System asks how much memory this process will need. 
 * Allocate this memory using "best-fit" approach.
 
 ### The handling routine does:
