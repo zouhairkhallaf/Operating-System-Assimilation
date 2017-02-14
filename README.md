@@ -5,6 +5,7 @@
 #### 1/"sys gen" section:
 *	The system installer (me) specifies how many devices of each type (printers and disks) are in the system
 *	Program asks user how much memory our system has (assume that there is only one CPU).
+
 #### 2/"running" section:
 *	Handle system calls issued by the process currently controlling the CPU (lower case will indicate system calls).
 *	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process. 
