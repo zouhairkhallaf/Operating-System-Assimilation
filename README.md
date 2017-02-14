@@ -11,7 +11,9 @@
 #### 2/"running" section:
 *	Handle system calls issued by the process currently controlling the CPU (lower case will indicate system calls).
 *	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process.
+
 =====================================
+
 #### These calls and interrupts will actually be indicated by keyboard input
 1. An "A" entered on the keyboard indicates the arrival of a process. 
 2. System asks how much memory this process will need. 
@@ -21,7 +23,9 @@
 1. Create a PCB for this process, 
 2. Generate a PID,
 3. Enqueue the PCB into the Ready Queue.
+
 =====================================
+
 #### If the CPU is not occupied, 
 * The first process in the Ready Queue should be passed to the CPU. 
   * The process in the CPU can issue system calls. One of these is "t", which indicate that the process is terminating.
