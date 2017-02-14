@@ -40,27 +40,23 @@
 
 #### •The handling routine should wait for the next keyboard input and, 
 
-# * if "r":
-..* Show the PIDs of the processes in the Ready Queue, 
-
+### * if "r":
+ * Show the PIDs of the processes in the Ready Queue, 
 ### * if "p":
-
-o	Show the PIDs of the processes in the printer queues.
-..*	Printer specific information: I/O queue, 
-o	Name of the file that is currently printing
-o	Its size
+ * Show the PIDs of the processes in the printer queues.
+ * Printer specific information: I/O queue, 
+ * Name of the file that is currently printing
+ * Its size
 
 ### * if "d":
+* Display I/O queue,
+* Name of the file that is currently printing, 
+* Size
+* Type of operation ("read" or "write")). 
+* Be sure the contents of the queues don't scroll of a 24 line. screen. 
 
-o	Display I/O queue,  
-o	Name of the file that is currently printing, 
-o	Size
-o	Type of operation ("read" or "write")). 
-o	Be sure the contents of the queues don't scroll of a 24 line. screen. 
-
-## *If "S" interrupt is followed by "m":
-
-o	Show the current state of memory (show where each process is located in memory)
+### *If "S" interrupt is followed by "m":
+* Show the current state of memory (show where each process is located in memory)
 
 
 
