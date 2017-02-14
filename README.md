@@ -3,16 +3,15 @@
 
 This program has two stages of operation:
 ### 1/"sys gen" section:
-•	The system installer (me) specifies how many devices of each type (printers and disks) are in the system
-•	Program asks user how much memory our system has (assume that there is only one CPU).
+*	The system installer (me) specifies how many devices of each type (printers and disks) are in the system
+*	Program asks user how much memory our system has (assume that there is only one CPU).
 ### 2/"running" section:
-•	Handle system calls issued by the process currently controlling the CPU (lower case will indicate system calls).
-•	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process.
-These calls and interrupts will actually be indicated by keyboard input
+*	Handle system calls issued by the process currently controlling the CPU (lower case will indicate system calls).
+*	Handle interrupts that signal various system events (Capital letters will be interrupts). All interrupts will be handled "atomically" (one can not interrupt an interrupt handling routine) and will return control to the interrupted process. ###### These calls and interrupts will actually be indicated by keyboard input
 
-->An "A" entered on the keyboard indicates the arrival of a process. 
-->System asks how much memory this process will need. 
-->Allocate this memory using "best-fit" approach.
+*->An "A" entered on the keyboard indicates the arrival of a process. 
+*->System asks how much memory this process will need. 
+*->Allocate this memory using "best-fit" approach.
 
 #### The handling routine should:
 1.	Create a PCB for this process, 
